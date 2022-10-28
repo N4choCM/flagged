@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Final Score"
+        android:text="@string/final_score"
         android:textColor="@color/white"
         android:textSize="35sp"
         android:textStyle="bold"
@@ -25,7 +25,7 @@
         android:id="@+id/iv_score"
         android:layout_width="350dp"
         android:layout_height="350dp"
-        android:contentDescription="Picture"
+        android:contentDescription="@string/picture"
         android:src="@drawable/ic_trophy"
         />
 
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Congratulations champion!"
+        android:text="@string/congratulations_champion"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -49,7 +49,7 @@
         android:textColor="#ffd400"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:text="Your score is 28 out of 50."
+        android:text="@string/your_score_is_28_out_of_50"
         />
 
     <Button
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/white"
-        android:text="PLAY AGAIN"
+        android:text="@string/play_again"
         android:textColor="#574e85"
         android:textSize="18sp"
         android:textStyle="bold"
