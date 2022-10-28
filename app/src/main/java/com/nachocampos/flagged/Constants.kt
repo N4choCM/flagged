@@ -65,7 +65,7 @@ object Constants {
             R.drawable.cuba,
             "Puerto Rico",
             "Cuba",
-            "Usa",
+            "USA",
             "Austria",
             2
         )

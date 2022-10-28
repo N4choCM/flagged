@@ -51,10 +51,25 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvOptionD?.setOnClickListener(this)
         btnSubmit?.setOnClickListener(this)
 
+        /**
+         * Here we fill the array list of questionsList with all the questions created in the class
+         * Constants.
+         */
         questionsList = Constants.getQuestions()
         setQuestion()
     }
 
+    /**
+     * Method which assignas the value of a question from the arrayList questionsList (which was
+     * filled with the questions created in the class Constants) to the var question of type
+     * Question and links the components of the question of the class Constant with the view of the
+     * activity_questions.xml so that the user can see it.
+     * Furthermore, the progress bar and the counter gets increased.
+     * It also has a conditional statement which changes the text of the button to "FINISH" if we
+     * are on the last question.
+     * The defaultOptionsView() method is called at the beginning so that all the options are
+     * colorless.
+     */
     private fun setQuestion() {
 
         defaultOptionsView()
@@ -76,6 +91,10 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+    /**
+     * Method which defines an array list with all the options of the current question and
+     * establishes the font style and the borders style of these options.
+     */
     private fun defaultOptionsView(){
         val options = ArrayList<TextView>()
         tvOptionA?.let{
@@ -102,6 +121,11 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+    /**
+     * Method that changes the style of the selected option with a purple border and bold text.
+     * The defaultOptionsView() method is called at the beginning so that all the options are
+     * colorless.
+     */
     private fun selectedOptionView(tv : TextView, selectedOptNum : Int){
         defaultOptionsView()
 
@@ -115,6 +139,17 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
         )
     }
 
+    /**
+     * Method which decides when to call the selectedOptionView() and the answerView() methods.
+     * The former method establishes a purple border and bold typography when selecting an option,
+     * whereas the latter paints the tv in green or red depending on the result of the question.
+     * It also gives functionality to the btn_submit button. This functionality consists of deciding
+     * whether going to the final score activity with an intent or showing the next question.
+     * Similarly, if we finished the quiz, the btn_submit displays the text "FINISH", but if we
+     * haven't finished yet, the text displayed will be "GO TO NEXT QUESTION".
+     * At the end of the method, the selectedOptionPosition is restarted to 0 in order to ensure
+     * the correct function of the following question.
+     */
     override fun onClick(view: View?) {
 
         when(view?.id){
@@ -177,6 +212,10 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    /**
+     * Method which defines the behaviour of the (in)correct option (i.e., whether they are painted
+     * in green or both in green and red).
+     */
     private fun answerView(answer: Int, drawableView : Int){
         when(answer){
             1 -> {

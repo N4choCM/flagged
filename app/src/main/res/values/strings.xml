@@ -5,4 +5,5 @@
     <string name="please_enter_your_user_name">Please enter your Username:</string>
     <string name="username">Username</string>
     <string name="let_s_play">Let\'s play!</string>
+    <string name="quiz_picture">Quiz picture</string>
 </resources>

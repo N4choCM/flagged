@@ -32,7 +32,7 @@
             android:layout_width="250dp"
             android:layout_height="150dp"
             android:layout_marginTop="16dp"
-            android:contentDescription="Quiz picture"
+            android:contentDescription="@string/quiz_picture"
             tools:src="@drawable/germany"
             />
 
@@ -42,6 +42,7 @@
             android:gravity="center_vertical"
             android:layout_marginTop="16dp"
             android:orientation="horizontal"
+            android:layout_margin="10dp"
             >
 
             <ProgressBar
@@ -53,7 +54,7 @@
                 android:max="50"
                 android:indeterminate="false"
                 android:minHeight="50dp"
-                android:progress="5"
+                android:progress="25"
                 />
 
             <TextView
