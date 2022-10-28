@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Flagged!"
+        android:text="@string/flagged"
         android:textSize="45sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -28,7 +28,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         app:cardCornerRadius="20dp"
-        android:background="#FFFFFF">
+        android:background="#FFFFFF"
+        android:layout_marginBottom="150dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,7 +40,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Welcome"
+                android:text="@string/welcome"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -49,7 +50,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please enter your user name:"
+                android:text="@string/please_enter_your_user_name"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -67,7 +68,7 @@
                     android:id="@+id/et_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Name"
+                    android:hint="@string/username"
                     android:inputType="textCapWords"
                     android:textColor="#363A43"
                     android:textColorHint="#7A8089"/>
@@ -80,8 +81,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="#574e85"
-                android:text="Let's play!"
-                android:textColor="@color/white"
+                android:text="@string/let_s_play"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 />
 

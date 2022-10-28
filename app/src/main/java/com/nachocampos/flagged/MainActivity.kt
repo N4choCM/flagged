@@ -15,14 +15,21 @@ class MainActivity : AppCompatActivity() {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-        val btn_play : Button = findViewById(R.id.btn_play)
-        val et_name : EditText = findViewById(R.id.et_name)
-        btn_play.setOnClickListener {
-            if (et_name.text.isEmpty()){
+        val btnPlay : Button = findViewById(R.id.btn_play)
+        val etName : EditText = findViewById(R.id.et_name)
+
+        /**
+         * Conditional statement that throws an info toast any time the user clicks the btnPlay
+         * without filling in the etName with his or her user name. If it's not empty, we create
+         * an instance of the class Intent to state from which activity to which one we are going to
+         * navigate and which data we need to transfer to the QuestionsActivity.
+         */
+        btnPlay.setOnClickListener {
+            if (etName.text.isEmpty()){
                 Toast.makeText(this, "Please enter your user name", Toast.LENGTH_LONG).show()
             }else{
                 val intent = Intent(this, QuestionsActivity::class.java)
-                intent.putExtra(Constants.USER_NAME, et_name.text.toString())
+                intent.putExtra(Constants.USER_NAME, etName.text.toString())
                 startActivity(intent)
                 finish()
             }
